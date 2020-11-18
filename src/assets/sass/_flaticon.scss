@@ -1,0 +1,201 @@
+/*
+Flaticon icon font: Flaticon
+Creation date: 15/05/2019 09:38
+*/
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/flaticon/Flaticon.eot");
+    src: url("../fonts/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/flaticon/Flaticon.woff2") format("woff2"),
+    url("../fonts/flaticon/Flaticon.woff") format("woff"),
+    url("../fonts/flaticon/Flaticon.ttf") format("truetype"),
+    url("../fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+
+.fi:before{
+    display: inline-block;
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.flaticon-down-arrow:before { content: "\f100"; }
+.flaticon-right-arrow:before { content: "\f101"; }
+.flaticon-left-arrow:before { content: "\f102"; }
+.flaticon-cancel:before { content: "\f103"; }
+.flaticon-cancel-1:before { content: "\f104"; }
+.flaticon-download:before { content: "\f105"; }
+.flaticon-caret-down:before { content: "\f106"; }
+.flaticon-thumbs-up:before { content: "\f107"; }
+.flaticon-thumbs-up-hand-symbol:before { content: "\f108"; }
+.flaticon-thumb-down:before { content: "\f109"; }
+.flaticon-thumb-up:before { content: "\f10a"; }
+.flaticon-wallet:before { content: "\f10b"; }
+.flaticon-wallet-filled-money-tool:before { content: "\f10c"; }
+.flaticon-wallet-1:before { content: "\f10d"; }
+.flaticon-wallet-2:before { content: "\f10e"; }
+.flaticon-money:before { content: "\f10f"; }
+.flaticon-funds:before { content: "\f110"; }
+.flaticon-money-bag-with-dollar-symbol:before { content: "\f111"; }
+.flaticon-sedan-car-model:before { content: "\f112"; }
+.flaticon-car:before { content: "\f113"; }
+.flaticon-envelope:before { content: "\f114"; }
+.flaticon-telephone-handle-silhouette:before { content: "\f115"; }
+.flaticon-telephone-symbol-button:before { content: "\f116"; }
+.flaticon-comments:before { content: "\f117"; }
+.flaticon-facebook:before { content: "\f118"; }
+.flaticon-twitter:before { content: "\f119"; }
+.flaticon-linkedin-logo:before { content: "\f11a"; }
+.flaticon-instagram:before { content: "\f11b"; }
+.flaticon-umbrella:before { content: "\f11c"; }
+.flaticon-doctor-stethoscope:before { content: "\f11d"; }
+.flaticon-credit-cards-payment:before { content: "\f11e"; }
+.flaticon-black-and-white-credit-cards:before { content: "\f11f"; }
+.flaticon-credit-cards:before { content: "\f120"; }
+.flaticon-checked:before { content: "\f121"; }
+.flaticon-security-on:before { content: "\f122"; }
+.flaticon-right:before { content: "\f123"; }
+.flaticon-correct:before { content: "\f124"; }
+.flaticon-information-button:before { content: "\f125"; }
+.flaticon-information:before { content: "\f126"; }
+.flaticon-information-1:before { content: "\f127"; }
+.flaticon-email-filled-closed-envelope:before { content: "\f128"; }
+.flaticon-mail:before { content: "\f129"; }
+.flaticon-star:before { content: "\f12a"; }
+.flaticon-star-1:before { content: "\f12b"; }
+.flaticon-tag:before { content: "\f12c"; }
+.flaticon-tag-1:before { content: "\f12d"; }
+.flaticon-free:before { content: "\f12e"; }
+.flaticon-up-arrow:before { content: "\f12f"; }
+.flaticon-link:before { content: "\f130"; }
+.flaticon-arrow:before { content: "\f131"; }
+.flaticon-percentage:before { content: "\f132"; }
+.flaticon-discount:before { content: "\f133"; }
+.flaticon-play:before { content: "\f134"; }
+.flaticon-add:before { content: "\f135"; }
+.flaticon-book:before { content: "\f136"; }
+.flaticon-spinner-of-dots:before { content: "\f137"; }
+.flaticon-backspace:before { content: "\f138"; }
+.flaticon-maps-and-flags:before { content: "\f139"; }
+.flaticon-pencil-striped-symbol-for-interface-edit-buttons:before { content: "\f13a"; }
+.flaticon-caret-arrow-up:before { content: "\f13b"; }
+.flaticon-docs:before { content: "\f13c"; }
+.flaticon-clock:before { content: "\f13d"; }
+.flaticon-calendar:before { content: "\f13e"; }
+.flaticon-dot-right-arrow:before { content: "\f13f"; }
+.flaticon-arrowhead-pointing-to-the-right:before { content: "\f140"; }
+.flaticon-danger:before { content: "\f141"; }
+.flaticon-turn-notifications-on-button:before { content: "\f142"; }
+.flaticon-plus:before { content: "\f143"; }
+.flaticon-user:before { content: "\f144"; }
+.flaticon-start-up:before { content: "\f145"; }
+.flaticon-hospital:before { content: "\f146"; }
+.flaticon-medicine:before { content: "\f147"; }
+.flaticon-stethoscope:before { content: "\f148"; }
+.flaticon-dental-care:before { content: "\f149"; }
+.flaticon-maternity:before { content: "\f14a"; }
+.flaticon-pdf-file:before { content: "\f14b"; }
+.flaticon-hand-finger-pointing-down:before { content: "\f14c"; }
+.flaticon-copy:before { content: "\f14d"; }
+.flaticon-left-arrow-1:before { content: "\f14e"; }
+.flaticon-external-link-symbol:before { content: "\f14f"; }
+
+$font-Flaticon-down-arrow: "\f100";
+$font-Flaticon-right-arrow: "\f101";
+$font-Flaticon-left-arrow: "\f102";
+$font-Flaticon-cancel: "\f103";
+$font-Flaticon-cancel-1: "\f104";
+$font-Flaticon-download: "\f105";
+$font-Flaticon-caret-down: "\f106";
+$font-Flaticon-thumbs-up: "\f107";
+$font-Flaticon-thumbs-up-hand-symbol: "\f108";
+$font-Flaticon-thumb-down: "\f109";
+$font-Flaticon-thumb-up: "\f10a";
+$font-Flaticon-wallet: "\f10b";
+$font-Flaticon-wallet-filled-money-tool: "\f10c";
+$font-Flaticon-wallet-1: "\f10d";
+$font-Flaticon-wallet-2: "\f10e";
+$font-Flaticon-money: "\f10f";
+$font-Flaticon-funds: "\f110";
+$font-Flaticon-money-bag-with-dollar-symbol: "\f111";
+$font-Flaticon-sedan-car-model: "\f112";
+$font-Flaticon-car: "\f113";
+$font-Flaticon-envelope: "\f114";
+$font-Flaticon-telephone-handle-silhouette: "\f115";
+$font-Flaticon-telephone-symbol-button: "\f116";
+$font-Flaticon-comments: "\f117";
+$font-Flaticon-facebook: "\f118";
+$font-Flaticon-twitter: "\f119";
+$font-Flaticon-linkedin-logo: "\f11a";
+$font-Flaticon-instagram: "\f11b";
+$font-Flaticon-umbrella: "\f11c";
+$font-Flaticon-doctor-stethoscope: "\f11d";
+$font-Flaticon-credit-cards-payment: "\f11e";
+$font-Flaticon-black-and-white-credit-cards: "\f11f";
+$font-Flaticon-credit-cards: "\f120";
+$font-Flaticon-checked: "\f121";
+$font-Flaticon-security-on: "\f122";
+$font-Flaticon-right: "\f123";
+$font-Flaticon-correct: "\f124";
+$font-Flaticon-information-button: "\f125";
+$font-Flaticon-information: "\f126";
+$font-Flaticon-information-1: "\f127";
+$font-Flaticon-email-filled-closed-envelope: "\f128";
+$font-Flaticon-mail: "\f129";
+$font-Flaticon-star: "\f12a";
+$font-Flaticon-star-1: "\f12b";
+$font-Flaticon-tag: "\f12c";
+$font-Flaticon-tag-1: "\f12d";
+$font-Flaticon-free: "\f12e";
+$font-Flaticon-up-arrow: "\f12f";
+$font-Flaticon-link: "\f130";
+$font-Flaticon-arrow: "\f131";
+$font-Flaticon-percentage: "\f132";
+$font-Flaticon-discount: "\f133";
+$font-Flaticon-play: "\f134";
+$font-Flaticon-add: "\f135";
+$font-Flaticon-book: "\f136";
+$font-Flaticon-spinner-of-dots: "\f137";
+$font-Flaticon-backspace: "\f138";
+$font-Flaticon-maps-and-flags: "\f139";
+$font-Flaticon-pencil-striped-symbol-for-interface-edit-buttons: "\f13a";
+$font-Flaticon-caret-arrow-up: "\f13b";
+$font-Flaticon-docs: "\f13c";
+$font-Flaticon-clock: "\f13d";
+$font-Flaticon-calendar: "\f13e";
+$font-Flaticon-dot-right-arrow: "\f13f";
+$font-Flaticon-arrowhead-pointing-to-the-right: "\f140";
+$font-Flaticon-danger: "\f141";
+$font-Flaticon-turn-notifications-on-button: "\f142";
+$font-Flaticon-plus: "\f143";
+$font-Flaticon-user: "\f144";
+$font-Flaticon-start-up: "\f145";
+$font-Flaticon-hospital: "\f146";
+$font-Flaticon-medicine: "\f147";
+$font-Flaticon-stethoscope: "\f148";
+$font-Flaticon-dental-care: "\f149";
+$font-Flaticon-maternity: "\f14a";
+$font-Flaticon-pdf-file: "\f14b";
+$font-Flaticon-hand-finger-pointing-down: "\f14c";
+$font-Flaticon-copy: "\f14d";
+$font-Flaticon-left-arrow-1: "\f14e";
+$font-Flaticon-external-link-symbol: "\f14f";

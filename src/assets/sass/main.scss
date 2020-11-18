@@ -1,0 +1,215 @@
+@charset "utf-8";
+/*===================================================================
+[Master Stylesheet]
+===================================================================
+
+Project:        BankOnUs
+Version:        1.0
+Author:         M.Owais
+URL:            https://bankonus.com (Banking)
+Primary use:    BankOnUs.com
+Started date:	23/9/2018 (MM/DD/YYYY)
+*/
+
+// Import global usage library - [Start]
+@import 'libs/libs';
+@import 'variables';
+// Import global usage library - [/end]
+
+.main-wrapper{}
+
+// Support Section
+.support-section{padding: $section-padding;
+    a{text-decoration:none;}
+    .call{@include display(flex); @include justify-content(center);
+        .call-btn{display:block; padding:0; border:solid 1px $bc1-lightest; text-decoration:none; overflow: hidden; height:50px; line-height:50px; @include clearfix;
+            @include border-radius(100px);
+            @include box-shadow(0, 1px, 3px, $bc1-lighter);
+            >*{float:left; padding:0 25px; @include transition($duration-2);}
+            .lbl{background:$bc1-lightest; color:$black; font-size:$bfsize+4;}
+            .number{color:$basecolor1; font-size:$bfsize+7;
+                span{font-size:$bfsize+1; @include opacity(0.8); display: inline-block; vertical-align: top;}
+            }
+            &:hover{border-color:$basecolor1;
+                .lbl{color:$basecolor1;}
+                .number{background:$basecolor1 !important; color:$white !important;}
+            }
+        }
+    }
+    // With purple background only
+    &.bg-basecolor1{
+        .hgroup{margin-bottom: 12px;}
+        .call{
+            .call-btn{@include box-shadow(0, 0, 0, transparent);
+                .number{color:$white;
+                }
+                &:hover{border-color:$bc1-lightest;
+                    .number{background:$white; color:$basecolor1;}
+                }
+            }
+        }
+    }
+}
+
+// Jquery UI - Tooltip
+[data-toggle="tooltip"]{color:$lightergray;}
+.ui-tooltip{background: darken($basecolor2, 8%); @include box-shadow(0, 0, 0, transparent); color:$white;
+    &, *{border:none;}
+    &.ui-widget.ui-widget-content{display:none !important;}
+}
+
+// Tooltips
+.has-tooltip{position:relative; padding-right:40px !important;
+    .tooltip-box{padding:0 !important;
+        @include position(absolute, 0 0 null null);
+        *{@include transition($duration-2);}
+        .icon{font-size:$bfsize+8; color:darken($lightestgray, 8%);}
+        .info-wrap{margin-left:10px; visibility: hidden; z-index:10; text-transform: none; background:darken($basecolor2, 14%); color:$white; text-align:center; font-size:$bfsize; line-height:1.4em; width: 300px; padding:10px;
+            @include opacity(0);
+            @include position(absolute, -10px null null 100%);
+            @include transform(translate(0, 20px));
+            @include border-radius(8px);
+            &:before{content:"\eb26"; font-family:$iconfont; display:block; @include position(absolute, 10px null null -17px); color:darken($basecolor2, 14%); font-size:30px;}
+        }
+        &:hover{
+            .icon{color:$basecolor1;}
+            .info-wrap{visibility: visible; @include opacity(1); @include transform(translate(0, 0));}
+        }
+    }
+
+    &.form-group{
+        .tooltip-box{top:11px; right:11px;}
+    }
+    &.has-checkbox{
+        .tooltip-box{top:1px;}
+    }
+    &.attr{
+        .tooltip-box{top:3px;}
+    }
+    .tooltip-wrap{position:relative;
+        .tooltip-box{right:-29px;}
+    }
+
+    // Right
+    &.left-tooltip{
+        .tooltip-box{
+            .info-wrap{left:inherit; right:100%; margin-left:0; margin-right:10px;
+                &:before{content:"\eb27"; left:inherit; right:-17px;}
+            }
+        }
+    }
+}
+
+.form-overlay{background:rgba($overlay-bg1, 0.85); padding-top:$header-height;
+    z-index:100;
+    @include size(100%);
+    @include position(fixed, 0 null null 0);
+    .field-row{
+        &:not(:last-child){border-bottom:solid 1px rgba($white, 0.2); padding-bottom:12px; margin-bottom:12px;}
+    }
+}
+
+// Dropdown
+.cs-dropdown-wrap{position:relative;
+    >a{@include border-radius(8px 8px 0 0); overflow: hidden;
+        .iconfont-simple-down{margin-left:3px; background:transparent;}
+    }
+    .form-control{
+        @include placeholder{
+            color:$lightergray; font-size:$bfsize-sm;
+        };
+    }
+    .cs-dropdown-box{visibility: hidden; background:$white; padding:15px; border:solid 1px $lightestgray; width:480px; border-top:none; overflow: hidden; z-index:100;
+        @include border-radius(10px 0 10px 10px);
+        @include box-shadow(1px, 10px, 18px, rgba($black, 0.2));
+        @include position(absolute, 100% null null 0);
+        @include opacity(0);
+        @include transition($duration-2);
+        @include transform(translate(0, -20px));
+        .dd-hgroup{margin-bottom:10px;
+            .ddtitle{color:$basecolor1; font-size:$h5; margin-bottom:5px;}
+            p{color:$lightergray; font-size:$bfsize-sm;}
+        }
+        .ddinner{border:solid 1px transparent;}
+    }
+    &.dd-right{
+        >a{padding:0 8px; @include border-radius(8px 8px 0 0);}
+        .cs-dropdown-box{right:0; left:inherit;}
+    }
+    &.active{
+        .cs-dropdown-box{visibility: visible;
+            @include opacity(1);
+            @include transform(translate(0, 0));
+        }
+        >a{background:$white; color:$basecolor1 !important;
+            .iconfont-simple-down:before{content:"\eb7a";}
+        }
+    }
+
+    &.dd-center{
+        &.active{}
+        .cs-dropdown-box{right:0; left:inherit;}
+    }
+}
+
+// Owl Carousel
+.owl-carousel{position:relative; position:relative;
+    .owl-nav{
+        .owl-prev, .owl-next{font-size:0%; color:transparent;
+            &:before{font-size:$bfsize+4; font-family:$iconfont;}
+        }
+        .owl-prev{left:0;
+            &:before{content:"\f102";}
+        }
+        .owl-next{right:0;
+            &:before{content:"\f101";}
+        }
+        .disabled{@include opacity(0.4); cursor:default;}
+    }
+    &:not(.arrow-tpr){padding:0 55px;
+        .owl-nav{@include position(absolute, 0 null null 0); width:100%;
+            .owl-prev, .owl-next{padding:0; background: $basecolor1; color:$white; line-height:48px; text-align:center;
+                @include position(absolute, 0 null null null);
+                @include border-radius(8px);
+                @include size(48px);
+                &:before{font-size:$bfsize+10; color:$white;}
+            }
+        }
+    }
+    &.arrow-tpr{
+        .owl-nav{@include position(absolute, -63px 0 null null); @include border-radius(35px); overflow: hidden; @include box-shadow(0, 1px, 2px, $lightestgray);
+            .owl-prev, .owl-next{float:left; height:35px; line-height:35px;
+                &:before{display: block; background:$white; color:$basecolor1; padding:0 15px;}
+            }
+            .owl-prev{
+                &:before{margin-right:1px;}
+            }
+            .owl-next{
+                &:before{}
+            }
+        }
+    }
+}
+
+.iconfont-check-circled,
+.iconfont-close-circled{font-size:$bfsize+6;}
+.iconfont-check-circled{color:$basecolor1;}
+.iconfont-close-circled{color:$basecolor2;}
+
+.active .flaticon-down-arrow:before{content:"\f12f";}
+
+.hide-lang{
+    &:not(.show-lang){
+        .lang-link{display:none !important;}
+    }
+}
+.shadow-bt{
+    &:after{content:""; margin:3px auto 0; display:block; background: url(https://static.bankonus.com/images/banking/bt-shadow.png) no-repeat top center; background-size:100% 100%; @include size(100%, 8px);}
+}
+.lbl{color:$basecolor2;}
+.value{color:$black;}
+
+
+/*===================================================================
+	2) Global Styles - /end
+===================================================================*/

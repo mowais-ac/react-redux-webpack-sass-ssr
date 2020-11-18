@@ -1,0 +1,133 @@
+@charset "utf-8";
+/*===================================================================
+[Master Stylesheet]
+===================================================================
+
+Project:        BankOnUs
+Version:        1.0
+Author:         M.Owais
+URL:            https://bankonus.com (Banking)
+Primary use:    BankOnUs.com
+Started date:	23/9/2018 (MM/DD/YYYY)
+*/
+
+// Import global usage library - [Start]
+@import 'libs/libs';
+@import 'variables';
+// Import global usage library - [/end]
+
+@include for-mobile-large-screen(){
+
+    // Global ---- Start
+    [class*="mobile hidden"],
+    [class*="tablet only"]:not(.mobile),
+    [class*="computer only"]:not(.mobile),
+    [class*="large monitor only"]:not(.mobile),
+    [class*="widescreen monitor only"]:not(.mobile),
+    [class*="or lower hidden"] {
+        display: none !important;
+    }
+
+    .noflex-xs{
+        @include display(inherit !important); @include align-items(inherit !important); @include justify-content(inherit !important); display: block;
+    }
+
+    .xs-left{
+        &, *{text-align:left !important;}
+    }
+    .xs-center{
+        &, *{text-align:center !important;}
+    }
+    .xs-right{
+        &, *{text-align:right !important;}
+    }
+    .xs-full-w{width:100% !important;}
+
+    .no-float-xs{float:none !important;}
+
+    .xs-section-padding 	{padding: $section-padding-sm !important;}
+    .xs-section-padding-sm {padding: $section-padding-xs !important;}
+    .xs-section-padding-xs {padding: $section-padding-mb !important;}
+    .section-padding-lg{padding: $section-padding-sm !important;}
+
+    .xs-marginauto{display:table !important; @include margin(null (auto !important));}
+
+    .xs-fn{float:none !important;}
+    .xs-pull-left{float:left !important;}
+    .xs-pull-right{float:right !important;}
+
+    // Headings
+    .hidden-mb{display:none !important;}
+    .visible-mb{display:block !important;}
+
+    body {
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{margin-bottom: 10px;}
+        h1, .h1{font-size:$h1-mb;}
+        h2, .h2{font-size:$h2-mb;}
+        h3, .h3{font-size:$h3-mb;}
+        h4, .h4{font-size:$h4-mb;}
+        h5, .h5{font-size:$h5-mb;}
+        h6, .h6{font-size:$h6-mb;}
+
+        .hgroup{margin-bottom:15px;}
+    }
+
+    .divider{
+        &.md{margin:10px 0;}
+        &.lg{margin:40px 0;}
+    }
+    // Global ---- /end
+
+    #header{height:$header-height-mb + $header-padding-top-mb; padding-top:$header-padding-top-mb;
+        .lang-link{top:30px;}
+        .right-col{padding-top: 8px;
+            .header-useropt{
+                > ul{
+                    > li.call .btn{width:62px !important; height:62px !important; padding:0 !important; text-align:center; border:solid 1px rgba($white, 0.2);
+                        &, .fi{line-height:62px !important; font-size:$bfsize+5 !important; color:$white;}
+                    }
+                }
+                li{
+                    .btn{
+                        @include border-radius(100%);
+
+                    }
+                }
+            }
+        }
+        #logo a{padding-top:0;}
+
+        .hamburger-wrap{right:10px;}
+
+        .megamenu-inner{font-size:$bfsize-sm+1;
+            .mm-row-1{padding:0;}
+            .mm-header{margin:0 0 10px; padding:12px 0;
+                .mm-logo{width:77px; margin-top:3px;}
+            }
+
+            // h2{margin-bottom:0;}
+
+            .mainmenu-link, .quick-links-col{}
+
+            .prdCat-sec-col{padding-top:20px; padding-bottom:20px;
+                &:first-child{padding-top:10px;}
+                &:nth-child(even){border-top:solid 1px $bc1-lightest;}
+            }
+
+            .mainmenu-link ul li a{padding-top:8px; padding-bottom:8px;}
+            .provider-link{margin-top:10px;}
+            .mm-article-link{margin-top:10px; padding-top:10px;}
+            .quick-links-col{padding-top:12px; padding-bottom:12px;
+                h4{margin-bottom:0;}
+            }
+            .quick-links-wrap{display:none;}
+        }
+    }
+}
+
+
+@include for-mobile-large-screen{
+    body{
+        .ui.form .fields .field{margin: 6px 0 !important;}
+    }
+}

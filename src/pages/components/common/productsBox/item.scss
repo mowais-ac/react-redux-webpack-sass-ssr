@@ -1,0 +1,38 @@
+@import "../../../../assets/sass/variables";
+
+.item-row{background: $white; border: solid 1px $bc1-lighter; margin: 12px 0; padding: 0;
+    @include box-shadow(0, 1px, 4px, $bc1-lighter);
+    @include border-radius($base-border-radius);
+    [class*="column-"]{}
+
+    .column-title-thumb{@include flex(0 0 20%);}
+    .column-features{@include flex(0 0 56%);}
+    .column-apply{@include flex(0 0 24%); min-height: 125px;}
+
+    .column-title-thumb{ padding: 10px 12px;
+        .thumb{
+            img{max-width: 120px;}
+        }
+        .title{margin-top:8px; font-size: $bfsize-sm; color: $lightgray;}
+    }
+
+
+    .column-features{
+        .attr{
+            .lbl{font-size:$bfsize;}
+            .value{font-size: $bfsize+4; margin-top:6px;
+                .fi{font-size: $bfsize+8;}
+            }
+        }
+    }
+
+    .column-apply{padding: 0 12px;
+        .button{margin: 8px 0;}
+    }
+
+    @include for-mobile-large-screen{
+        .column-features{background: $bc1-lightest; padding: 4px 8px;
+            .attr{padding: 8px 10px;}
+        }
+    }
+}
