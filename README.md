@@ -4,7 +4,7 @@
 JavaScript applications are tough to setup either. Either for development or for production, or set things up yourself manually. Aiming to fill this void, this repository is a tool that abstracts all complex configuration needed for both SPA's and SSR applications into a single dependency giving you the awesome user as well as developer experience with webpack.
 
 ## How to install & run on localhost?
-To run in localhost please open your terminal and run `npm run start:dev` from the directory, after successful compilation you will able to open with `http://localhost:3000`
+To run in localhost please open your terminal, go the project folder and run `npm install` then run `npm run start:dev`, after successful compilation you will able to open with `http://localhost:3000`
 
 ## How to build for production?
 Its just one step to make build for production. You just need to run a command from your favourite terminal `npm run build:prod`. This will compile all your code into single directory `dist` that you can find on the root of your project.
