@@ -13,3 +13,6 @@ Why you should prefer this repository.
 This resposity is adding value to developer's life. By using this repository the developer can focus on building new features without any worry about the configuration dependencies.
 
 That's All you need.
+
+Author
+https://www.linkedin.com/in/mowais-me/
