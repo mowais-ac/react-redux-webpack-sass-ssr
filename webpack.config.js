@@ -7,9 +7,6 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                resolve: {
-                    extensions: [".js", ".jsx"]
-                },
             },
             {
                 // Loads the javacript into html template provided.
@@ -66,4 +63,7 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
     },
+    resolve: {
+        extensions: [".js", ".jsx", ".json"]
+    }
 };

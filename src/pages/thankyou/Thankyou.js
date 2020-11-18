@@ -3,8 +3,7 @@ import Header from "../components/global/_header";
 import Footer from "../components/global/_footer";
 import { Container } from 'semantic-ui-react'
 import {connect} from "react-redux";
-import {LoaderOverlay} from '../components/Reusable'
-import thankyou from '../../assets/images/thank-you.svg'
+import { LoaderOverlay } from '../components/Reusable'
 
 class Thankyou extends Component {
 
@@ -24,29 +23,18 @@ class Thankyou extends Component {
     }
 
     render() {
-        const {activeIndex, isFetchingApplication} = this.state
-        const { getSwitchTab, ccStepsControllerGet, successPersonalInfo, successEmploymentInfo } = this.props
+        const {} = this.state
+        const {} = this.props
 
         return (
-            <div className="main-wrapper transparent-header cc-onlineApplication-main">
+            <div className="main-wrapper">
                 <Header/>
                 <div className="content-wrap">
-                    {isFetchingApplication ? (
-                        <LoaderOverlay/>
-                    ) : ''}
-                    <div className="top-bg top-bar creditcard-bg"></div>
-                    <div className="cc-onlineApplication-wrap">
-                        <div className="additional-form-section section-padding-xxl white-bg">
-                            <Container text>
-                                <div className="text-thankyou align-center">
-                                    <div className="thankyou"><img src={thankyou} alt=""/></div>
-                                    <h1>Thank you</h1>
-                                    <h5>Your credit card application has been submitted successfully.</h5>
-                                    <p>We have received your enquiry and our expert advisor will contact you within 24 hours. If you have any query, please call us on <a href="tel:80022656687" class="ltr-ar dp-inline-block">800BANKONUS (22656687)</a>.</p>
-                                </div>
-                            </Container>
+                    <Container text>
+                        <div className="text-thankyou align-center">
+                            <h1>Thank you</h1>
                         </div>
-                    </div>
+                    </Container>
                 </div>
 
                 <Footer/>
@@ -56,7 +44,7 @@ class Thankyou extends Component {
 }
 
 const mapStateToProps = state => {
-    const { ccTabSwitchReducer, verifyPersonalInformationReducer, verifyEmploymentDetailReducer, getDocumentsReducer, getCCStepsControllerReducer, verifyLiabilityDetailsReducer, selectCreditcardReducer, verifyCcAdditionalDetailsReducer } = state
+    const {  } = state
     return {
 
     }

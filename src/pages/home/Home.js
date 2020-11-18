@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { Container, Grid, Form, Input, Menu, Tab, Icon, Button } from 'semantic-ui-react'
+import { Container,} from 'semantic-ui-react'
 
 class Home extends React.Component {
     constructor(props){
@@ -14,8 +14,10 @@ class Home extends React.Component {
     componentDidMount(){}
     render () {
         return (
-            <main className="main-wrapper transparent-header creditcardIndex-main">
-                <h1>Its a quick starter React application with SSR + webpack + Sass + Redux</h1>
+            <main className="main-wrapper">
+                <Container text>
+                    <h1>Its a quick starter React application with SSR + webpack + Sass + Redux</h1>
+                </Container>
             </main>
         )
     }
