@@ -3,6 +3,7 @@
 ## Assignment
 For the job seeker, The assignment is to convert this react applicaton into Server-side rendering (SSR) by using Express.js and staying in the current code structure. 
 Please clone this repository and create a new branch from `main`, the branch name can be start with your name.
+Also make a simple api request by using redux dispatcher, pleaes make sure to write code on the relevant directory `src/pages/redux/`
 
 ## Overview
 JavaScript applications are tough to setup either. Either for development or for production, or set things up yourself manually. Aiming to fill this void, this repository is a tool that abstracts all complex configuration needed for both SPA's and SSR applications into a single dependency giving you the awesome user as well as developer experience with webpack.
