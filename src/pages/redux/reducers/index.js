@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import {additionalInformationSubmitReducer} from './additionalInformation-submit-reducer'
+import {countryListReducer} from './country-list-reducer'
 
 export const rootReducer = combineReducers({
-    additionalInformationSubmitReducer: additionalInformationSubmitReducer,
+    countryListReducer: countryListReducer,
 })

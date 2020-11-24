@@ -3,4 +3,4 @@
  */
 
 // Location
-export const GET_COUNTRIES = '/nationality'
+export const GET_COUNTRIES = '/get-active-countries'

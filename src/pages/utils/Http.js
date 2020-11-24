@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 process.env.NODE_ENV === 'development' ? (
-    axios.defaults.baseURL = 'http://localhost:7070/v1'
+    axios.defaults.baseURL = 'https://cors-anywhere.herokuapp.com/https://applist.com/api'
 ) : (
-    axios.defaults.baseURL = 'https://proteus.bankonus.com/v1'
+    axios.defaults.baseURL = 'https://applist.com/api'
 )
 
-// axios.defaults.headers.common['Authorization'] = "Basic " + window.btoa("mobileapi:Applist2019")
+axios.defaults.headers.common['Authorization'] = "Basic " + window.btoa("mobileapi:Applist2019")
 axios.defaults.headers['content-type'] = 'application/json'
 axios.defaults.headers['withCredentials'] = true
 axios.defaults.headers['crossorigin'] = true

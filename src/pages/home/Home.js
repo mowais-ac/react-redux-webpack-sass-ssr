@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
 import { Container,} from 'semantic-ui-react'
+import {listCountries} from "../redux/actions/country-list-actions";
+import { Menu, Loader } from 'semantic-ui-react'
 
 class Home extends React.Component {
     constructor(props){
@@ -11,12 +12,27 @@ class Home extends React.Component {
         }
     }
 
-    componentDidMount(){}
+    componentDidMount(){
+        this.props.listCountries(listCountries())
+    }
     render () {
+        const {countryList} = this.props
         return (
             <main className="main-wrapper">
                 <Container text>
-                    <h1>Its a quick starter React application with SSR + webpack + Sass + Redux</h1>
+                    <br/><br/><br/>
+                    <h1>List of countries</h1>
+                    {!countryList.searching ? (
+                        <Menu vertical>
+                            {countryList.data.map(item => {
+                                return (
+                                    <Menu.Item link>{item.name}</Menu.Item>
+                                )
+                            })}
+                        </Menu>
+                    ) : (
+                        <Loader active inline='centered' />
+                    )}
                 </Container>
             </main>
         )
@@ -24,15 +40,15 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const {  } = state
+    const { countryListReducer } = state
     return {
-
+        countryList: countryListReducer,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        listCountries: (data) => dispatch(data),
     }
 }
 
